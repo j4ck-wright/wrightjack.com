@@ -7,6 +7,9 @@ module.exports = {
 		'plugin:import/warnings',
 		'prettier'
 	],
+	rules: {
+		'svelte/no-at-html-tags': 'off'
+	},
 	parser: '@typescript-eslint/parser',
 	plugins: ['@typescript-eslint'],
 	parserOptions: {
