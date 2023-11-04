@@ -8,7 +8,7 @@ const parseMarkdownFile = async (postSlug: string) => {
 		const markdownContent = await fs.readFile(postPath, 'utf-8');
 		return MDtoHTML(markdownContent);
 	} catch (e) {
-		throw new Error(`Could not parse ${postSlug}.md`);
+		throw new Error(`Error parsing ${postSlug}.md`);
 	}
 };
 
