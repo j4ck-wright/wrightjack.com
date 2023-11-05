@@ -6,6 +6,7 @@ categories:
   - Test
   - SvelteKit
 published: false
+banner: 1
 ---
 
 # Header 1
@@ -43,7 +44,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Lorem...
 
-```ts:car.ts {13} showLineNumbers
+```ts:car.ts {6-10, 13} showLineNumbers
 export class Car extends Vehicle {
   private readonly RegistrationPlate: string
   private readonly NumDoors: number
