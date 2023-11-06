@@ -52,52 +52,52 @@ pre {
 	background-color: hsl(0 84% 60% / 20%);
 }
 
-.token.regex,
-.token.important,
-.token.variable,
-.token.function,
-.token.class-name,
-.language-css .token.rule {
-	color: red;
-}
+// .token.regex,
+// .token.important,
+// .token.variable,
+// .token.function,
+// .token.class-name,
+// .language-css .token.rule {
+// 	color: red;
+// }
 
-.token.keyword,
-.language-css .token.variable,
-.language-css .token.selector,
-.language-css .token.pseudo-element {
-	color: purple;
-}
+// .token.keyword,
+// .language-css .token.variable,
+// .language-css .token.selector,
+// .language-css .token.pseudo-element {
+// 	color: purple;
+// }
 
-.token.tag,
-.token.boolean,
-.token.constant,
-.token.symbol,
-.token.deleted,
-.token.entity,
-.token.url,
-.style .token.string {
-	color: orange;
-}
+// .token.tag,
+// .token.boolean,
+// .token.constant,
+// .token.symbol,
+// .token.deleted,
+// .token.entity,
+// .token.url,
+// .style .token.string {
+// 	color: orange;
+// }
 
-.token.operator,
-.token.punctuation,
-.literal-property.property,
-.token.property,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted,
-.language-css .unit,
-.language-css .token.function,
-.token.atrule .token.property,
-.token.atrule .token.rule {
-	color: darkblue;
-}
+// .token.operator,
+// .token.punctuation,
+// .literal-property.property,
+// .token.property,
+// .token.attr-name,
+// .token.string,
+// .token.char,
+// .token.builtin,
+// .token.inserted,
+// .language-css .unit,
+// .language-css .token.function,
+// .token.atrule .token.property,
+// .token.atrule .token.rule {
+// 	color: darkblue;
+// }
 
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-	color: green;
-}
+// .token.comment,
+// .token.prolog,
+// .token.doctype,
+// .token.cdata {
+// 	color: green;
+// }
