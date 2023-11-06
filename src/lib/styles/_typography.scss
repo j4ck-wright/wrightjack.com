@@ -2,18 +2,20 @@ body {
 	font-family: 'Lato', sans-serif;
 
 	@include themed() {
-		background-color: t('bg');
 		color: t('text');
+		background-color: t('bg');
 	}
 	margin: 0;
 }
 
 article {
 	padding: 0 1.5rem;
-}
-
-.monospace {
-	font-family: monospace, monospace;
+	max-width: 750px;
+	@include themed() {
+		background-color: t('bg');
+		color: t('text');
+	}
+	margin: auto;
 }
 
 article h1,
@@ -27,4 +29,28 @@ h6 {
 
 article p {
 	margin-top: 0;
+}
+
+.monospace {
+	font-family: monospace, monospace;
+}
+
+@media (min-width: 775px) {
+	article {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, -6rem);
+
+		header {
+			h1 {
+				padding-top: 1rem;
+			}
+		}
+	}
+
+	body {
+		@include themed() {
+			background-color: t('underlay');
+		}
+	}
 }
