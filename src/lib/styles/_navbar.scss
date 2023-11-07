@@ -1,0 +1,68 @@
+nav {
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+	padding: 0.2rem 1rem;
+
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+
+	@include themed() {
+		background: rgba(t('bg'), 0.5);
+	}
+
+	a {
+		position: relative;
+		padding: 0.4rem;
+		text-decoration: none;
+	}
+
+	a::after {
+		position: absolute;
+		display: block;
+		content: '';
+		width: 100%;
+		height: 1px;
+		bottom: 2px;
+		left: 0;
+		opacity: 0;
+
+		@include themed() {
+			background-color: t('text');
+		}
+
+		transition: all 0.3s ease 0s, left 0.3s ease;
+	}
+
+	a:hover::after {
+		opacity: 1;
+	}
+
+	a,
+	span {
+		@include themed() {
+			color: t('text');
+		}
+	}
+
+	.logo {
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		user-select: none;
+	}
+
+	.btns {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2.4rem;
+	}
+}
+@media (max-width: 775px) {
+	nav {
+		.logo {
+			visibility: hidden;
+		}
+	}
+}
