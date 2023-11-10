@@ -9,7 +9,7 @@ RUN yarn build
 FROM node:18-alpine AS runner
 
 ENV NODE_ENV=production
-COPY --from=build /app/posts .
+COPY --from=build /app/posts/ .
 COPY --from=build /app/build build/
 COPY --from=build /app/package.json .
 
