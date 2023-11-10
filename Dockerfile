@@ -5,11 +5,14 @@ WORKDIR /app
 COPY . .
 RUN yarn
 RUN yarn build
+RUN yarn install --production --ignore-scripts --prefer-offline --frozen-lockfile
+
 
 FROM node:18-alpine AS runner
 
 ENV NODE_ENV=production
-COPY --from=build /app/posts/ .
+COPY --from=build /app/posts/ posts/
+COPY --from=build /app/node_modules node_modules/
 COPY --from=build /app/build build/
 COPY --from=build /app/package.json .
 
