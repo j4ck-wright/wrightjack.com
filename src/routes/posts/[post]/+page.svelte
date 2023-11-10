@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { formatDate } from '$lib';
-	import './code.scss';
 
 	export let data;
 	const { content, metadata } = data.post;
@@ -12,12 +11,10 @@
 <article>
 	<header>
 		<h1>{title}</h1>
-
+		<span class="monospace date highlight">{formatDate(date)},</span>
 		{#each categories as category}
 			<span class="badge">#{category}</span>
 		{/each}
-		<br />
-		<span class="monospace date">{formatDate(date)}</span>
 	</header>
 	{@html content}
 </article>
@@ -27,10 +24,15 @@
 		margin: 0.6rem 0;
 	}
 
+	header {
+		margin-bottom: 4rem;
+	}
+
 	.date {
 		display: block;
-		font-size: 1.25rem;
-		margin-top: 3rem;
+		font-size: 1rem;
+		margin-top: 1rem;
+		margin-bottom: 0.6rem;
 	}
 
 	.banner {
