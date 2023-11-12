@@ -4,7 +4,7 @@
 	export let data;
 	const { content, metadata } = data.post;
 	const { title, date, categories } = metadata;
-	import Banner from '$lib/banners/banner3.jpg';
+	import Banner from '$lib/assets/banners/banner3.jpg';
 </script>
 
 <img src={Banner} alt="" class="banner" />
