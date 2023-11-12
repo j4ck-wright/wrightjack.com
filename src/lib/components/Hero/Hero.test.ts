@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
 import { Hero } from '..';
 
@@ -10,7 +10,7 @@ describe('Hero Component Test Suite', () => {
 	});
 
 	it('Matches snapshot', async () => {
-		let snapshot = render(Hero);
+		const snapshot = render(Hero);
 		await expect(snapshot).toMatchFileSnapshot('snapshot/snapshot.html');
 	});
 });
